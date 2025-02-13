@@ -37,6 +37,7 @@ function cellClicked() {
 function updateCell(cell, index) {
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
+    cell.classList.add(currentPlayer); 
 }
 
 function changePlayer() {
