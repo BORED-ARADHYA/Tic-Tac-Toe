@@ -1,20 +1,84 @@
-.cell {
-    width:75px;
-    height: 75px;
-    border: 2px solid;
-    box-shadow: 0 0 0 2px;
-    line-height: 75px;
-    font-size:50px;
-    cursor:pointer ;
-
-}
-#gameContainer {
-    font-family: "Permanent Marker", cursive;
+body {
+    font-family: 'Poppins', sans-serif;
     text-align: center;
+    background: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#cellContainer{
+
+#gameContainer {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 320px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+#cellContainer {
     display: grid;
-    grid-template-columns: repeat(3,auto);
-    width:225px;
-    margin:auto;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 5px;
+    justify-content: center;
+    margin: 15px auto;
+}
+
+.cell {
+    width: 80px;
+    height: 80px;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 28px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.cell:hover {
+    background: #f0f0f0;
+}
+
+.cell.X {
+    color: #2d7dd2;
+}
+
+.cell.O {
+    color: #d92d2d;
+}
+
+#statusText {
+    font-size: 18px;
+    color: #555;
+    margin: 12px 0;
+}
+
+#restartBtn {
+    padding: 8px 18px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    border: none;
+    background: #e0e0e0;
+    color: #333;
+    border-radius: 6px;
+    transition: background 0.2s ease-in-out;
+}
+
+#restartBtn:hover {
+    background: #d6d6d6;
 }
